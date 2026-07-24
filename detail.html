@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Details Page</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= TOP HEADER ================= -->
+
+<div class="top-header bg-warning text-white py-2">
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-6">
+<i class="fa fa-envelope"></i>
+info@restaurant.com
+
+&nbsp;&nbsp;
+
+<i class="fa fa-phone"></i>
++880 123456789
+</div>
+
+<div class="col-md-6 text-md-end">
+
+<a href="reservation.html" class="text-white me-3">Reservation</a>
+
+<a href="login.html" class="text-white me-3">Login/Register</a>
+
+
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container-fluid">
+
+<a class="navbar-brand fw-bold" href="#">Restaurant</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link " href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="menu.html">Menu</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="detail.html">Details</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="reservation.html">Reservation</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About Us</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="login.html">Login</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="signup.html">SignUp</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+</nav>
+
+<style>
+
+body{
+    background:#f8f9fa;
+}
+
+/* Breadcrumb */
+.breadcrumb-section{
+    background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4") center/cover;
+    height:220px;
+    position:relative;
+}
+
+.breadcrumb-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
+}
+
+.breadcrumb-content{
+    position:relative;
+    color:#fff;
+    z-index:2;
+    text-align:center;
+    padding-top:75px;
+}
+
+/* Dish Image */
+
+.zoom-img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+    cursor:zoom-in;
+}
+
+.zoom-img:hover{
+    transform:scale(1.1);
+}
+
+/* Card */
+
+.info-card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.price{
+    color:#dc3545;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.related img{
+    height:200px;
+    object-fit:cover;
+}
+
+.card{
+    border:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Breadcrumb Section -->
+
+<section class="breadcrumb-section">
+
+<div class="container">
+
+<div class="breadcrumb-content">
+
+<h1>Dish Details</h1>
+
+<nav>
+
+<ol class="breadcrumb justify-content-center">
+
+<li class="breadcrumb-item">
+<a href="#" class="text-white text-decoration-none">Home</a>
+</li>
+
+<li class="breadcrumb-item active text-warning">
+Dish Details
+</li>
+
+</ol>
+
+</nav>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Dish Details -->
+
+<div class="container py-5">
+
+<div class="row g-5">
+
+<!-- Left -->
+
+<div class="col-lg-6">
+
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+class="zoom-img img-fluid"
+alt="Pizza">
+
+<p class="text-muted mt-3">
+<i class="bi bi-zoom-in"></i>
+Hover over the image to zoom.
+</p>
+
+</div>
+
+<!-- Right -->
+
+<div class="col-lg-6">
+
+<div class="card info-card">
+
+<div class="card-body">
+
+<h2>Margherita Pizza</h2>
+
+<p class="text-muted">
+Fresh mozzarella cheese, tomato sauce, basil leaves and crispy crust. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum deserunt id labore? Iusto, consectetur ab. Excepturi voluptas eaque nam nesciunt dignissimos, culpa, cupiditate rem adipisci, aspernatur sequi labore ab delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cupiditate illum fugit consequatur similique blanditiis numquam aut inventore totam beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, sapiente.
+</p>
+
+<h3 class="price">14.99Tk</h3>
+
+<hr>
+
+<label class="form-label">
+Quantity
+</label>
+
+<input
+type="number"
+class="form-control w-25"
+min="1"
+value="1">
+
+<div class="mt-4">
+
+<button class="btn btn-success btn-lg">
+<i class="bi bi-cart-fill"></i>
+Order Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Dish Details -->
+
+<div class="container mb-5">
+
+<div class="card p-4">
+
+<h3>Dish Details</h3>
+
+<p>
+
+Enjoy our authentic Margherita Pizza made with freshly baked dough,
+rich tomato sauce, premium mozzarella cheese, basil leaves, and
+olive oil. Perfectly baked in a stone oven to deliver a crispy
+and delicious taste.
+
+</p>
+
+<hr>
+
+<h4>Nutrition Information</h4>
+
+<table class="table table-bordered">
+
+<tr>
+<th>Calories</th>
+<td>320 kcal</td>
+</tr>
+
+<tr>
+<th>Protein</th>
+<td>14 g</td>
+</tr>
+
+<tr>
+<th>Carbohydrates</th>
+<td>38 g</td>
+</tr>
+
+<tr>
+<th>Fat</th>
+<td>12 g</td>
+</tr>
+
+<tr>
+<th>Fiber</th>
+<td>3 g</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- Related Dishes -->
+
+<div class="container pb-5 related">
+
+<h2 class="text-center mb-4">
+Related Dishes
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600891964092-4316c288032e"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Pasta Alfredo</h5>
+
+<p class="text-danger fw-bold">12.99Tk</p>
+
+<button class="btn btn-outline-success">
+View Details
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Cheese Burger</h5>
+
+<p class="text-danger fw-bold">10.99Tk</p>
+
+<button class="btn btn-outline-success">
+View Details
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Caesar Salad</h5>
+
+<p class="text-danger fw-bold">8.99Tk</p>
+
+<button class="btn btn-outline-success">
+View Details
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer class="bg-dark text-white pt-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-3">
+
+<h4>Restaurant</h4>
+
+<p>Best food in town.</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h4>Quick Links</h4>
+
+<a href="index.html">Home</a><br>
+
+<a href="menu.html">Menu</a><br>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="col-md-3">
+
+<h4>Opening Hours</h4>
+
+<p>Mon-Sun</p>
+
+<p>9AM - 11PM</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h4>Follow Us</h4>
+
+<i class="fab fa-facebook fa-2x"></i>
+
+<i class="fab fa-instagram fa-2x"></i>
+
+<i class="fab fa-twitter fa-2x"></i>
+
+</div>
+
+</div>
+
+<hr>
+
+
+<footer class="bg-dark text-white py-3">
+    <div class="container">
+        <div class="text-center">
+            <p class="mb-0">
+                &copy; <span id="year"></span> Restaurant |
+                <span id="datetime"></span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function updateDateTime() {
+    const now = new Date();
+
+    // Current Year
+    document.getElementById("year").textContent = now.getFullYear();
+
+    // Format Date & Time
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    };
+
+    document.getElementById("datetime").textContent =
+        now.toLocaleString("en-US", options);
+}
+
+// Initial call
+updateDateTime();
+
+// Update every second
+setInterval(updateDateTime, 1000);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

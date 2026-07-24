@@ -1,0 +1,41 @@
+
+body{
+            background:#f8f9fa;
+        }
+
+        /* Breadcrumb Banner */
+        .breadcrumb-banner{
+            background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80") center/cover;
+            height:250px;
+            position:relative;
+        }
+
+        .breadcrumb-banner::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:rgba(0,0,0,.6);
+        }
+
+        .banner-content{
+            position:relative;
+            z-index:1;
+            color:#fff;
+            height:100%;
+        }
+
+        .card{
+            border:none;
+            border-radius:15px;
+        }
+
+        .btn-custom{
+            background:#d35400;
+            color:#fff;
+        }
+
+        .btn-custom:hover{
+            background:#b84300;
+            color:#fff;
+        }
+        
